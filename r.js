@@ -15,12 +15,14 @@ function detectmob() {
  || navigator.userAgent.match(/BlackBerry/i)
  || navigator.userAgent.match(/Windows Phone/i)
  ){
-    return false;
-  }
- else {
     return true;
   }
+ else {
+    return false;
+  }
 }
+
+detectmob = detectmob();
 
 var tm = {
 chrome:'https://chrome.google.com/webstore/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo',
