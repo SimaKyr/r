@@ -26,11 +26,11 @@ i.innerText = 'I use Dolphin on Android';
 i.onclick = function(){window.location.href ='https://play.google.com/store/apps/details?id=net.tampermonkey.dolphin';}
 document.body.appendChild(i);
 }else{
-if(isChrome){r(chrome);}
-if(isFirefox){r(firefox);}
-if(isEdge){r(edge);}
-if(isOpera){r(opera);}
-if(isSafari){r(safari);}
-if(isExplorer){r(chrome);}
-if(isUCMobile){r(ucmobile);}
+if(isChrome){r('chrome');}
+if(isFirefox){r('firefox');}
+if(isEdge){r('edge');}
+if(isOpera){r('opera');}
+if(isSafari){r('safari');}
+if(isExplorer){r('chrome');}
+if(isUCMobile){r('ucmobile');}
 }
