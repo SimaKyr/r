@@ -15,10 +15,10 @@ function detectmob() {
  || navigator.userAgent.match(/BlackBerry/i)
  || navigator.userAgent.match(/Windows Phone/i)
  ){
-    return true;
+    return false;
   }
  else {
-    return false;
+    return true;
   }
 }
 
