@@ -6,6 +6,22 @@ var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 var isExplorer= typeof document !== 'undefined' && !!document.documentMode && !isEdge;
 var isUCMobile = navigator.userAgent.indexOf(' UCBrowser/') >= 0;
 
+function detectmob() { 
+ if( navigator.userAgent.match(/Android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i)
+ ){
+    return true;
+  }
+ else {
+    return false;
+  }
+}
+
 var tm = {
 chrome:'https://chrome.google.com/webstore/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo',
 firefox:'https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/',
@@ -26,11 +42,11 @@ i.innerText = 'I use Dolphin on Android';
 i.onclick = function(){window.location.href ='https://play.google.com/store/apps/details?id=net.tampermonkey.dolphin';}
 document.body.appendChild(i);
 }else{
-if(isChrome){r('chrome');}
+if(detectmob){alert('Use Firefox, UC browser or Dolphin');}else{if(isChrome){r('chrome');}}
 if(isFirefox){r('firefox');}
-if(isEdge){r('edge');}
-if(isOpera){r('opera');}
-if(isSafari){r('safari');}
-if(isExplorer){r('chrome');}
+if(detectmob){alert('Use Firefox, UC browser or Dolphin');}else{if(isEdge){r('edge');}}
+if(detectmob){alert('Use Firefox, UC browser or Dolphin');}else{if(isOpera){r('opera');}}
+if(detectmob){alert('Use Firefox, UC browser or Dolphin');}else{if(isSafari){r('safari');}}
+if(detectmob){alert('Use Firefox, UC browser or Dolphin');}else{if(isExplorer){r('explorer');}}
 if(isUCMobile){r('ucmobile');}
 }
