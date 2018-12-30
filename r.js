@@ -20,7 +20,7 @@ if(isExplorer){alert('Use Edge or other browser!');throw new Error("Something we
 
 function r(b){window.location.href = tm[b];}
 
-if(!(isChrome&&isFirefox&&isEdge&&isOpera&&isSafari&&isExplorer&&isUCMobile)){alert('Use normal browser!');
+if(isChrome&&isFirefox&&isEdge&&isOpera&&isSafari&&isExplorer&&isUCMobile){alert('Use normal browser!');
 var i = document.createElement('button');
 i.innerText = 'I use Dolphin on Android';
 i.onclick = function(){window.location.href ='https://play.google.com/store/apps/details?id=net.tampermonkey.dolphin';}
