@@ -16,7 +16,7 @@ dolphin:'https://play.google.com/store/apps/details?id=net.tampermonkey.dolphin'
 ucmobile:'https://play.google.com/store/apps/details?id=net.tampermonkey.uc',
 explorer:'https://www.microsoft.com/uk-ua/windows/microsoft-edge'
 };
-if(isExplorer){alert('Use Edge or other browser!');break;}
+if(isExplorer){alert('Use Edge or other browser!');throw new Error("Something went badly wrong!");}
 
 function r(b){window.location.href = tm[b];}
 
