@@ -24,8 +24,7 @@ if(isChrome&&isFirefox&&isEdge&&isOpera&&isSafari&&isExplorer&&isUCMobile){alert
 var i = document.createElement('button');
 i.innerText = 'I use Dolphin on Android';
 i.onclick = function(){window.location.href ='https://play.google.com/store/apps/details?id=net.tampermonkey.dolphin';}
-var ki = document.getElementsByTagName('body')[0];
-ki.appendChild(i);
+document.body.appendChild(i);
 }else{
 if(isChrome){r(chrome);}
 if(isFirefox){r(firefox);}
