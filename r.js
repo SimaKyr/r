@@ -35,9 +35,7 @@ ucmobile:'https://play.google.com/store/apps/details?id=net.tampermonkey.uc',
 explorer:'https://www.microsoft.com/uk-ua/windows/microsoft-edge'
 };
 if(isExplorer){alert('Use Edge or other browser!');throw new Error("Something went badly wrong!");}
-
 function r(b){window.location.href = tm[b];}
-
 if(isChrome&&isFirefox&&isEdge&&isOpera&&isSafari&&isExplorer&&isUCMobile){alert('Use normal browser!');
 var i = document.createElement('button');
 i.innerText = 'I use Dolphin on Android';
